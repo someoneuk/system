@@ -8,6 +8,11 @@ have a nice day
 
 -- made this in mobile lol
 
-local result, fetch = loadstring(https://raw.githubusercontent.com/someoneuk/system/refs/heads/main/fetch_1)
+local result, fetch = loadstring(game:HttpGet("https://raw.githubusercontent.com/someoneuk/system/refs/heads/main/fetch_1"))()
 
-if result then
+if not result or not fetch then
+ print("failed to fetch")
+end
+
+if result and fetch then
+ 
